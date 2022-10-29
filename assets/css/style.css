@@ -1116,6 +1116,11 @@ section {
   text-align: right;
 }
 
+.contact .form-control[type=text]:focus {
+  border-color: var(--col-acc-light);
+  box-shadow: 0px 0px 5px 0px var(--col-acc-light);
+}
+
 .contact form button {
   background: var(--col-acc-medium);
   border-radius: 20px;
