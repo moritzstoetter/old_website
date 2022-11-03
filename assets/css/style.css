@@ -10,8 +10,8 @@
   --col-acc-medium: #963131;
   --col-acc-dark:   #632020;
 
-  --col-bg-light:   #e6e6e6;
-  --col-bg-medium:  rgb(193, 193, 193);
+  --col-bg-light:   #f6f6f6;
+  --col-bg-medium:  #c1c1c1;
   --col-bg-dark:    #9c9c9c;
 
   --col-fg-light:   #777777;
@@ -26,6 +26,7 @@ body {
   font-family: "Open Sans", sans-serif;
   background-color: var(--col-bg-light);
   color: var(--col-fg-dark);
+  background-image: url("../img/noise.png");
 }
 
 section {
@@ -221,11 +222,12 @@ h4 {
   transition: 0.3s;
   font-size: 15px;
   border-radius: 50px;
-  background: rgba(193,193,193,0.5);
+  background: white;
   height: 56px;
   width: 100%;
   overflow: hidden;
   transition: 0.3s;
+  border: 1px solid var(--col-bg-medium);
 }
 
 .nav-menu a i,
@@ -252,19 +254,16 @@ h4 {
   }
 }
 
-.nav-menu a:hover,
 .nav-menu .active,
-.nav-menu .active:focus,
-.nav-menu li:hover>a {
+.nav-menu .active:focus {
   border: 1px solid;
-  border-color: var(--col-fg-light);
+  border-color: var(--col-acc-medium);
+  color: var(--col-acc-medium);
 }
 
-.nav-menu a:hover span,
 .nav-menu .active span,
-.nav-menu .active:focus span,
-.nav-menu li:hover>a span {
-  /* color: var(--col-bg-light); */
+.nav-menu .active:focus span {
+  color: var(--col-acc-medium);
 }
 
 .nav-menu a:hover,
@@ -328,13 +327,16 @@ h4 {
   border-bottom: 3px dotted var(--col-bg-medium);
 }
 
+#hero .text {
+} 
+
 #hero .headshot {
   width: 100%;
   height: 100vh;
   background: url("../img/me01.webp") bottom center no-repeat;
-
   background-size: contain;
   position: relative;
+  opacity: .9;
 }
 
 @media (min-width: 992px) {
@@ -365,7 +367,8 @@ h4 {
   color: var(--col-fg-light);
   margin: 15px 0 0 0;
   font-size: 26px;
-  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  font-family: "Open Sans", sans-serif;
 }
 
 #hero p span {
@@ -612,7 +615,7 @@ section {
   height: 20px;
   width: 20px;
   border-radius: 10px;
-  background-color: var(--col-bg-light);
+  background-color: white;
   border: 1px solid var(--col-bg-dark); 
 }
 
@@ -634,7 +637,7 @@ section {
   margin: 0 auto 25px auto;
   list-style: none;
   text-align: center;
-  background: var(--col-bg-light);
+  background: transparent;
   border-radius: 50px;
   padding: 2px 15px;
 }
@@ -655,6 +658,7 @@ section {
 .portfolio #portfolio-flters li:hover,
 .portfolio #portfolio-flters li.filter-active {
   color: var(--col-fg-medium);
+  background-color: white;
   border: 1px solid var(--col-fg-medium);
   border-radius: 30px;
 }
@@ -668,7 +672,7 @@ section {
   position: relative;
   overflow: hidden;
   z-index: 1;
-  background: var(--col-bg-light);
+  background: transparent;
 }
 
 .portfolio .portfolio-wrap::before {
