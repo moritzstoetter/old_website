@@ -11,11 +11,11 @@
   --col-acc-dark:   #632020;
 
   --col-bg-light:   #e6e6e6;
-  --col-bg-medium:  #c1c1c1;
+  --col-bg-medium:  rgb(193, 193, 193);
   --col-bg-dark:    #9c9c9c;
 
   --col-fg-light:   #777777;
-  --col-fg-medium:  #525252;
+  --col-fg-medium:  rgb(82, 82, 82);
   --col-fg-dark:    #2d2d2d;
 }
 
@@ -176,10 +176,10 @@ h4 {
 
 @media (max-width: 991px) {
   #header {
-    width: 300px;
-    background: var(--col-bg-light);
-    border-right: 1px solid #e6e9ec;
-    left: -300px;
+    width: 200px;
+    /* background: var(--col-bg-light); */
+    background: transparent;
+    left: -200px;
   }
 }
 
@@ -221,7 +221,7 @@ h4 {
   transition: 0.3s;
   font-size: 15px;
   border-radius: 50px;
-  background: var(--col-bg-light);
+  background: rgba(193,193,193,0.5);
   height: 56px;
   width: 100%;
   overflow: hidden;
@@ -256,8 +256,6 @@ h4 {
 .nav-menu .active,
 .nav-menu .active:focus,
 .nav-menu li:hover>a {
-  /* color: var(--col-bg-light); */
-  /* background: #0563bb; */
   border: 1px solid;
   border-color: var(--col-fg-light);
 }
@@ -330,20 +328,11 @@ h4 {
   border-bottom: 3px dotted var(--col-bg-medium);
 }
 
-#hero .text{
-  width: 50vw;
-  /* height: 20%; */
-  /* background: url("../img/me01.webp") center right no-repeat; */
-  /* background-size: cover; */
-  position: relative;
-}
-
-#hero .headshot{
-  height: 50vh;
-  /* height: auto; */
-  width: 40%;
-  /* max-height: 600px; */
+#hero .headshot {
+  width: 100%;
+  height: 100vh;
   background: url("../img/me01.webp") bottom center no-repeat;
+
   background-size: contain;
   position: relative;
 }
@@ -1067,58 +1056,24 @@ section {
 # Contact
 --------------------------------------------------------------*/
 
-.contact form {
-  display: grid;
-  grid-template-columns: 50px 1fr 1fr 50px;
-  grid-template-rows: auto;
-  column-gap: 20px;
-  row-gap: 5px;
+.contact .form-control {
+  margin: 5px 0 5px 0;
 }
 
-.contact .contact-name-label {
-  grid-column-start: 2;
-  grid-column-end: 3;
-  text-align: right;
-}
-.contact .contact-name-input {
-  grid-column-start: 3;
-  grid-column-end: 4;
-}
-
-.contact .contact-email-label {
-  grid-column-start: 2;
-  grid-column-end: 3;
-  text-align: right;
-}
-.contact .contact-email-input {
-  grid-column-start: 3;
-  grid-column-end: 4;
-}
-
-.contact .contact-message-label {
-  grid-column-start: 2;
-  grid-column-end: 3;
-  text-align: right;
-}
-.contact .contact-message-input {
-  grid-column-start: 3;
-  grid-column-end: 4;
+.contact .form-control:focus {
+  border-color: var(--col-acc-light);
+  box-shadow: 0px 0px 5px 0px var(--col-acc-light);
 }
 
 .contact .btn {
-  grid-column-start: 3;
-  grid-column-end: 4;
+  background: var(--col-acc-medium);
+  border-radius: 20px;
+  border: 1px solid var(--col-acc-medium); 
 }
 
-.contact .disclaimer {
-  grid-column-start: 3;
-  grid-column-end: 4;
-  text-align: right;
-}
-
-.contact .form-control[type=text]:focus {
-  border-color: var(--col-acc-light);
-  box-shadow: 0px 0px 5px 0px var(--col-acc-light);
+.contact .btn:hover {
+  background: var(--col-acc-light);
+  border: 1px solid var(--col-acc-light); 
 }
 
 .contact form button {
