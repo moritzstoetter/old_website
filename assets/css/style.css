@@ -650,16 +650,22 @@ section {
   font-weight: 600;
   line-height: 1;
   text-transform: uppercase;
-  color: var(--col-bg-medium);
+  color: var(--col-fg-medium);
   margin-bottom: 5px;
   transition: all 0.3s ease-in-out;
 }
 
-.portfolio #portfolio-flters li:hover,
-.portfolio #portfolio-flters li.filter-active {
+.portfolio #portfolio-flters li:hover {
   color: var(--col-fg-medium);
   background-color: white;
-  border: 1px solid var(--col-fg-medium);
+  border: 1px solid var(--col-bg-medium);
+  border-radius: 30px;
+}
+
+.portfolio #portfolio-flters li.filter-active {
+  color: var(--col-acc-medium);
+  background-color: white;
+  border: 1px solid var(--col-acc-medium);
   border-radius: 30px;
 }
 
@@ -673,11 +679,20 @@ section {
   overflow: hidden;
   z-index: 1;
   background: transparent;
+  padding: 10px;
+  overflow: visible;
+}
+
+.portfolio .portfolio-wrap img {
+  
+  filter: drop-shadow(10px 10px 10px var(--col-bg-dark));
 }
 
 .portfolio .portfolio-wrap::before {
   content: "";
-  background: rgba(255, 255, 255, 0.7);
+  background: rgba(255,255,255, 0.8);
+  border: 1px solid var(--col-bg-medium);
+  border-radius: 20px;
   position: absolute;
   left: 30px;
   right: 30px;
@@ -711,42 +726,14 @@ section {
   align-items: center;
 }
 
-.portfolio .portfolio-wrap .portfolio-info::before {
-  display: block;
-  content: "";
-  width: 48px;
-  height: 48px;
-  position: absolute;
-  top: 35px;
-  left: 35px;
-  border-top: 3px solid #d7dce1;
-  border-left: 3px solid #d7dce1;
-  transition: all 0.5s ease 0s;
-  z-index: 9994;
-}
-
-.portfolio .portfolio-wrap .portfolio-info::after {
-  display: block;
-  content: "";
-  width: 48px;
-  height: 48px;
-  position: absolute;
-  bottom: 35px;
-  right: 35px;
-  border-bottom: 3px solid #d7dce1;
-  border-right: 3px solid #d7dce1;
-  transition: all 0.5s ease 0s;
-  z-index: 9994;
-}
-
 .portfolio .portfolio-wrap .portfolio-info h4 {
   font-size: 20px;
-  color: var(--col-fg-light);
+  color: var(--col-fg-medium);
   font-weight: 600;
 }
 
 .portfolio .portfolio-wrap .portfolio-info p {
-  color: var(--col-fg-light);
+  color: var(--col-fg-medium);
   font-size: 14px;
   text-transform: uppercase;
   padding: 0;
