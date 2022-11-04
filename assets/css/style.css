@@ -15,7 +15,7 @@
   --col-bg-dark:    #9c9c9c;
 
   --col-fg-light:   #777777;
-  --col-fg-medium:  rgb(82, 82, 82);
+  --col-fg-medium:  #525252;
   --col-fg-dark:    #2d2d2d;
 }
 
@@ -26,7 +26,7 @@ body {
   font-family: "Open Sans", sans-serif;
   background-color: var(--col-bg-light);
   color: var(--col-fg-dark);
-  background-image: url("../img/noise.png");
+  background: url("../img/noise.png");
 }
 
 section {
