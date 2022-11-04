@@ -220,9 +220,10 @@
   new Swiper('.portfolio-details-slider', {
     speed: 400,
     loop: true,
+    watchOverflow: true, 
     autoplay: {
-      delay: 5000,
-      disableOnInteraction: false
+      delay: 10000,
+      disableOnInteraction: true
     },
     pagination: {
       el: '.swiper-pagination',
