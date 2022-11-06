@@ -1,11 +1,32 @@
-/**
-* Template Name: MyResume - v4.9.2
-* Template URL: https://bootstrapmade.com/free-html-bootstrap-template-my-resume/
-* Author: BootstrapMade.com
-* License: https://bootstrapmade.com/license/
-*/
+const setLang = (languageCode) => {
+  document.documentElement.setAttribute('lang', languageCode);
+  sessionStorage.setItem('language',languageCode);
+ 
+
+
+  // let langchoices = select('.lang-choice')
+
+  // if(langchoices) {
+  //   langchoices.forEach( item => {
+  //     item.classList.remove("active");
+  //   });
+  // }
+
+  // let langchoiceselected = sele
+  // if (backtotop) {
+  //   const toggleBacktotop = () => {
+  //     if (window.scrollY > 100) {
+  //       backtotop.classList.add('active')
+  //     } else {
+  //       backtotop.classList.remove('active')
+  //     }
+  //   }
+};
+
 (function() {
   "use strict";
+
+  document.documentElement.setAttribute('lang',sessionStorage.getItem('language'))
 
   /**
    * Easy selector helper function
@@ -97,7 +118,7 @@
   })
 
   /**
-   * Scrool with ofset on links with a class name .scrollto
+   * Scroll with offset on links with a class name .scrollto
    */
   on('click', '.scrollto', function(e) {
     if (select(this.hash)) {
@@ -115,7 +136,7 @@
   }, true)
 
   /**
-   * Scroll with ofset on page load with hash links in the url
+   * Scroll with offset on page load with hash links in the url
    */
   window.addEventListener('load', () => {
     if (window.location.hash) {
@@ -197,13 +218,6 @@
     }
 
   });
-
-  /**
-   * Initiate portfolio lightbox 
-   */
-  // const portfolioLightbox = GLightbox({
-  //   selector: '.portfolio-lightbox'
-  // });
 
   /**
    * Initiate portfolio details lightbox 
