@@ -345,7 +345,8 @@ html[lang=de] [lang]:not([lang=de]) {
 .nav-menu a:hover,
 .nav-menu li:hover>a {
   width: 100%;
-  /* color: var(--col-bg-light); */
+  color: var(--col-acc-medium);
+  border: 1px solid var(--col-acc-medium);
 }
 
 .nav-menu a:hover span,
@@ -432,6 +433,7 @@ html[lang=de] [lang]:not([lang=de]) {
 }
 
 #hero h1 {
+  padding: 0;
   margin: 0;
   font-size: 64px;
   font-weight: 700;
@@ -441,7 +443,8 @@ html[lang=de] [lang]:not([lang=de]) {
 
 #hero p {
   color: var(--col-fg-light);
-  margin: 15px 0 0 0;
+  margin: 15px 0 0 3px;
+  padding: 0;
   font-size: 26px;
   font-weight: 600;
   font-family: "Open Sans", sans-serif;
@@ -453,20 +456,28 @@ html[lang=de] [lang]:not([lang=de]) {
 }
 
 #hero .social-links {
-  margin-top: 30px;
+  list-style: none;
+  margin: 20px 0 0 0;
+  padding: 0px;
+}
+
+#hero .social-links li {
+  display: inline-block;
 }
 
 #hero .social-links a {
   font-size: 24px;
   display: inline-block;
-  color: var(--col-fg-light);
+  color: var(--col-bg-medium);
   line-height: 1;
-  margin-right: 20px;
   transition: 0.3s;
+  margin: 0 0 0 5px;
+  padding: 0;
 }
 
 #hero .social-links a:hover {
-  color: #0563bb;
+  color: var(--col-acc-medium);
+
 }
 
 @media (max-width: 992px) {
@@ -1215,6 +1226,22 @@ section {
 
 #footer .social-links {
   margin: 0 0 40px 0;
+  list-style: none;
+}
+
+#footer .social-links a {
+  font-size: 24px;
+  display: inline-block;
+  color: var(--col-fg-light);
+  line-height: 1;
+  transition: 0.3s;
+  margin: 0 0 0 5px;
+  padding: 0;
+}
+
+
+#footer .social-links a:hover {
+  color: var(--col-acc-medium);
 }
 
 #footer .copyright {
