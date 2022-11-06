@@ -7,9 +7,12 @@ const setLang = (languageCode) => {
 (function() {
   "use strict";
 
-  let setLang = sessionStorage.getItem('language');
-  
-  if (setLang === "de") {
+  const urlParams = new URLSearchParams(window.location.search);
+
+  let urlLang = urlParams.get('lang');
+  let sesLang = sessionStorage.getItem('language');
+
+  if (urlLang === "de" || sesLang === "de") {
     document.documentElement.setAttribute('lang','de') 
   } else {
     document.documentElement.setAttribute('lang','en') 
