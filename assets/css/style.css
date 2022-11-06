@@ -29,9 +29,7 @@ body {
   background: url("../img/noise.png");
 }
 
-section {
-
-}
+section {}
 
 p {
   hyphens: auto;
