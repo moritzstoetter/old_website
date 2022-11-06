@@ -33,8 +33,13 @@ section {
 
 }
 
+p {
+  hyphens: auto;
+}
+
 p .emph {
   font-weight: bold;
+  hyphens: auto;
 }
 
 a {
