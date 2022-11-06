@@ -149,11 +149,23 @@ const setLang = (languageCode) => {
   /**
    * Hero type effect
    */
-  const typed = select('.typed')
-  if (typed) {
-    let typed_strings = typed.getAttribute('data-typed-items')
+  const typed_en = select('.typed_en')
+  if (typed_en) {
+    let typed_strings = typed_en.getAttribute('data-typed-items')
     typed_strings = typed_strings.split(',')
-    new Typed('.typed', {
+    new Typed('.typed_en', {
+      strings: typed_strings,
+      loop: true,
+      typeSpeed: 100,
+      backSpeed: 50,
+      backDelay: 2000
+    });
+  }
+  const typed_de = select('.typed_de')
+  if (typed_de) {
+    let typed_strings = typed_de.getAttribute('data-typed-items')
+    typed_strings = typed_strings.split(',')
+    new Typed('.typed_de', {
       strings: typed_strings,
       loop: true,
       typeSpeed: 100,
