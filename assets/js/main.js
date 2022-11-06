@@ -2,31 +2,18 @@ const setLang = (languageCode) => {
   document.documentElement.setAttribute('lang', languageCode);
   sessionStorage.setItem('language',languageCode);
  
-
-
-  // let langchoices = select('.lang-choice')
-
-  // if(langchoices) {
-  //   langchoices.forEach( item => {
-  //     item.classList.remove("active");
-  //   });
-  // }
-
-  // let langchoiceselected = sele
-  // if (backtotop) {
-  //   const toggleBacktotop = () => {
-  //     if (window.scrollY > 100) {
-  //       backtotop.classList.add('active')
-  //     } else {
-  //       backtotop.classList.remove('active')
-  //     }
-  //   }
 };
 
 (function() {
   "use strict";
 
-  document.documentElement.setAttribute('lang',sessionStorage.getItem('language'))
+  let setLang = sessionStorage.getItem('language');
+  
+  if (setLang === "de") {
+    document.documentElement.setAttribute('lang','de') 
+  } else {
+    document.documentElement.setAttribute('lang','en') 
+  }
 
   /**
    * Easy selector helper function

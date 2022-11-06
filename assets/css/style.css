@@ -116,8 +116,14 @@ html[lang=de] .lang-choice-de {
   border-color: var(--col-acc-medium);
 }
 
+.bottom-right-selector a {
+  color: var(--col-fg-medium);
+
+}
+
 .bottom-right-selector a:hover {
   color: var(--col-acc-medium);
+  border-radius: 50px;
   border: 1px solid var(--col-acc-medium);
 }
 
