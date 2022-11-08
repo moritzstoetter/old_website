@@ -1,7 +1,6 @@
 const setLang = (languageCode) => {
   document.documentElement.setAttribute('lang', languageCode);
   sessionStorage.setItem('language',languageCode);
- 
 };
 
 (function() {
@@ -14,8 +13,10 @@ const setLang = (languageCode) => {
 
   if (urlLang === "de" || sesLang === "de") {
     document.documentElement.setAttribute('lang','de') 
+    sessionStorage.setItem('language','de');
   } else {
     document.documentElement.setAttribute('lang','en') 
+    sessionStorage.setItem('language','en');
   }
 
   /**
