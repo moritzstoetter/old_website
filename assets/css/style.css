@@ -639,7 +639,7 @@ section {
 
 .resume .resume-item-grid {
   display: grid;
-  grid-template-columns: 1fr 19.5px 1px 19.5px 1fr;
+  grid-template-columns: minmax(0, 1fr) 20px 1px 20px minmax(0, 1fr);
   grid-template-rows: 40px;
 }
 
@@ -673,9 +673,9 @@ section {
 }
 
 @media (max-width: 991px) {
-  .resume .resume-item-jobtitle > h4 {
+  /* .resume .resume-item-jobtitle > h4 {
     font-size: 18px;
-  }
+  } */
 }
 
 .resume .resume-item-company {
@@ -707,7 +707,6 @@ section {
 .resume .resume-item-description {
   grid-column: 5 / 6;
   grid-row: 4 / 7;
-  /* color: var(--col-fg-medium); */
 }
 
 .resume .seperator {
