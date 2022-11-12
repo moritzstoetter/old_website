@@ -36,6 +36,7 @@
   opacity: 1;
   filter: blur(0);
   transform: translateX(0);
+  background-color: transparent;
 }
 
 .hero .headshot.hidden {
@@ -47,6 +48,19 @@
 
 .hero .headshot.show {
   transform: translateY(0);
+}
+
+.skills .stars.hidden {
+  transition: all .8s;
+  transition-delay: .8s;
+  width: 0;
+  opacity: 1;
+  filter: blur(0);
+  transform: translateX(0);
+}
+
+.skills .stars.show {
+  width: 100%;
 }
 
 @media(prefers-reduced-motion) {
@@ -651,21 +665,43 @@ html[lang=de] [lang]:not([lang=de]) {
 /*--------------------------------------------------------------
 # Skills
 --------------------------------------------------------------*/
+.skills {
+  padding-left: 60px;
+  padding-right: 60px;
+  display: grid;
+  align-items: center;
+  justify-items: center;
 
+}
 
 .skills .skill {
   padding: 5px 10px 5px 0px;
   color: var(--col-fg-dark);
 }
 
-.skills .stars {
-  /* flex: 0 0 80px; */
-  text-align: right;
-  color: var(--col-acc-medium);
+.skills .skills-layout-grid { 
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  column-gap: 50px;
 }
 
-.skills .skill-category-title {
+.skills .skills-table-grid {
+  display: grid;
+  grid-template-columns: 150px 50px;
+}
+
+.skills .skills-category-title {
   padding: 15px 0 0 0;
+  grid-column: 1 / span 2;
+  align-self: center;
+  justify-self: center;
+}
+
+.skills .stars {
+  text-align: left;
+  align-self: center;
+  color: var(--col-acc-medium);
+  overflow: hidden;
 }
 
 /*--------------------------------------------------------------
