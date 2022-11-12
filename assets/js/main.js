@@ -6,6 +6,11 @@ const setLang = (languageCode) => {
 (function() {
   "use strict";
 
+  /**
+   * language selection 
+   * - url search parameter support
+   * - session storage support (for consistency across pages)
+   */
   const urlParams = new URLSearchParams(window.location.search);
 
   let urlLang = urlParams.get('lang');
@@ -51,6 +56,7 @@ const setLang = (languageCode) => {
   const onscroll = (el, listener) => {
     el.addEventListener('scroll', listener)
   }
+  
 
   /**
    * Navbar links active state on scroll
@@ -215,7 +221,6 @@ const setLang = (languageCode) => {
           filter: this.getAttribute('data-filter')
         });
         portfolioIsotope.on('arrangeComplete', function() {
-          AOS.refresh()
         });
       }, true);
     }
@@ -270,13 +275,34 @@ const setLang = (languageCode) => {
   /**
    * Animation on scroll
    */
-  window.addEventListener('load', () => {
-    AOS.init({
-      duration: 1000,
-      easing: 'ease-in-out',
-      once: true,
-      mirror: false
-    })
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('show');
+      } else {
+        entry.target.classList.remove('show');
+      }
+    });
+  });
+
+  const hiddenElements = document.querySelectorAll('.hidden');
+  hiddenElements.forEach((el) => observer.observe(el));
+
+  // if (headshot) {
+  //   const shiftHeadshot = () => {
+  //     // console.log(window.scrollY);
+  //     const scroll = window.scrollY;
+  //     headshot.style.transform = 'translate(0,${scroll})';
+  //   }
+  //   window.addEventListener('load', shiftHeadshot);
+  //   onscroll(document, shiftHeadshot);
+  // }
+
+  const headshot = document.querySelector('.headshot');
+  window.addEventListener('scroll', (e) =>{
+    const shiftY = Math.min(window.scrollY,610);
+    console.log(shiftY);
+    headshot.style.transform = 'translate(0,' + shiftY + 'px)';
   });
 
   /**

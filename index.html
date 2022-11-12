@@ -17,7 +17,6 @@
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
 
   <!-- Vendor CSS Files -->
-  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
   <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
   <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
   <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
@@ -34,7 +33,7 @@
   <!-- <button type="button" class="mobile-nav-toggle d-xl-none"><i class="bi bi-list mobile-nav-toggle"></i></button> -->
   <i class="bi bi-list mobile-nav-toggle d-lg-none"></i>
   <!-- ======= Header ======= -->
-  <header id="header" class="d-flex flex-column justify-content-center">
+  <header id="header" class="hidden d-flex flex-column justify-content-center">
 
     <nav id="navbar" class="navbar nav-menu">
       <ul>
@@ -50,41 +49,37 @@
   </header><!-- End Header -->  
 
   <!-- ======= Hero Section ======= -->
-  <section id="hero">
-    <div class="container" data-aos="zoom-in" data-aos-delay="100">
+  <section id="hero" class="hero">
 
-      <div class="row">
-        <div class="text col-12 col-lg-6 align-self-center">
-          <h1>Moritz Stötter</h1>
-          <p lang="en"><span class="typed_en" data-typed-items="Developer, Freelancer, Engineer"></span></p>
-          <p lang="de"><span class="typed_de" data-typed-items="Entwickler, Freiberufler, Ingenieur"></span></p>
-          <ul class="social-links">
-           <li><a href="https://linkedin.com/in/moritz-stötter-ab30b2252" target="_blank"><i class="bi bi-linkedin"></i></a></li>
-           <li><a href="https://github.com/moritzstoetter" target="_blank"><i class="bi bi-github"></i></a></li>
-           <li><a href="https://calendly.com/moritzstoetter/30min" target="_blank"><i class="bi bi-calendar-event"></i></a></li>
-          </ul>
-        </div>
-
-        <div class="col-12 col-lg-6">
-          <div class="headshot col-lg-5 align-self-end"></div>
-        </div>
-      </div>
-
+    <div class="hidden text">
+      <h1>Moritz Stötter</h1>
+      <p lang="en"><span class="typed_en" data-typed-items="Developer, Freelancer, Engineer"></span></p>
+      <p lang="de"><span class="typed_de" data-typed-items="Entwickler, Freiberufler, Ingenieur"></span></p>
+      <ul class="social-links">
+       <li><a href="https://linkedin.com/in/moritz-stötter-ab30b2252" target="_blank"><i class="bi bi-linkedin"></i></a></li>
+       <li><a href="https://github.com/moritzstoetter" target="_blank"><i class="bi bi-github"></i></a></li>
+       <li><a href="https://calendly.com/moritzstoetter/30min" target="_blank"><i class="bi bi-calendar-event"></i></a></li>
+      </ul>
     </div>
+
+    <div class="hidden headshot">
+      <div class=""></div>
+    </div>
+
   </section><!-- End Hero -->
 
   <main id="main">
 
     <!-- ======= About Section ======= -->
     <section id="about" class="about">
-      <div class="container" data-aos="fade-up">
+      <div class="container">
 
         <div class="section-title">
           <h2 lang="en">About</h2>
           <h2 lang="de">Über mich</h2>
         </div>
 
-        <div class="row justify-content-center">
+        <div class="hidden row justify-content-center">
           <!-- <div class="col-lg-4">
             <img src="assets/img/me02.webp" class="img-fluid" alt="">
           </div> -->
@@ -121,14 +116,14 @@
 
     <!-- ======= Skills Section ======= -->
     <section id="skills" class="skills">
-      <div data-aos="fade-up">
+      <div>
 
         <div class="section-title">
           <h2>Skills</h2>
         </div>
 
 
-        <div class="container">
+        <div class="hidden container">
           <div class="row align-items-center justify-content-center">
             <div class="col-12 col-lg-4">
                 <div class="row align-items-center justify-content-center">
@@ -240,13 +235,13 @@
 
     <!-- ======= Resume Section ======= -->
     <section id="resume" class="resume">
-      <div class="container" data-aos="fade-up">
+      <div class="container">
         
         <div class="section-title">
           <h2>CV</h2>
         </div>
 
-        <div class="row gy-5 justify-content-around" >
+        <div class="hidden row gy-5 justify-content-around" >
           <div class="col-lg-5">
 
             <h3 class="resume-title row justify-content-center" lang="en">Professional Experience</h3>
@@ -379,62 +374,64 @@
 
     <!-- ======= Portfolio Section ======= -->
     <section id="portfolio" class="portfolio section-bg">
-      <div class="container" data-aos="fade-up">
+      <div class="container">
 
         <div class="section-title">
           <h2>Highlights</h2>
         </div>
 
-        <div class="row">
-          <div class="col-lg-12 d-flex justify-content-center" data-aos="fade-up" data-aos-delay="100">
-            <ul id="portfolio-flters">
-              <li data-filter="*" class="filter-active">All</li>
-              <li data-filter=".filter-cpp">C++</li>
-              <li data-filter=".filter-embc">Embedded C</li>
-              <li data-filter=".filter-qt">Qt/QML</li>
-            </ul>
-          </div>
-        </div>
-
-        <div class="row portfolio-container" data-aos="fade-up" data-aos-delay="200">
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-embc">
-            <div class="portfolio-wrap">
-              <a href="pf_01-details.html" class="portfolio-details-lightbox" data-glightbox="type: external" title="Portfolio Details">
-                <img src="assets/img/portfolio/pf_01/pf_01_1.webp" class="img-fluid" alt="">
-                <div class="portfolio-info">
-                  <h4 lang="en">BLE Device Firmware</h4>
-                  <h4 lang="de">BLE Gerätefirmware</h4>
-                  <p>Embedded C, RTOS, Nordic Semiconductor</p>
-                </div>
-              </a>
+        <div class="hidden">
+          <div class="row">
+            <div class="col-lg-12 d-flex justify-content-center">
+              <ul id="portfolio-flters">
+                <li data-filter="*" class="filter-active">All</li>
+                <li data-filter=".filter-cpp">C++</li>
+                <li data-filter=".filter-embc">Embedded C</li>
+                <li data-filter=".filter-qt">Qt/QML</li>
+              </ul>
             </div>
           </div>
 
-          <div class="col-lg-4 col-md-6 portfolio-item filter-cpp filter-qt">
-            <div class="portfolio-wrap">
-              <a href="pf_02-details.html" class="portfolio-details-lightbox" data-glightbox="type: external" title="Portfolio Details">
-                <img src="assets/img/portfolio/pf_02/pf_02_1.webp" class="img-fluid" alt="">
-                <div class="portfolio-info">
-                  <h4>Cross-Platform App</h4>
-                  <p>C++, Qt/QML, Android, iOS, macOS, App</p>
-                </div>
-              </a>
-            </div>
-          </div>
+          <div class="row portfolio-container">
 
-          <div class="col-lg-4 col-md-6 portfolio-item filter-cpp filter-qt">
-            <div class="portfolio-wrap">
-              <a href="pf_03-details.html" class="portfolio-details-lightbox" data-glightbox="type: external" title="Portfolio Details">
-                <img src="assets/img/portfolio/pf_03/pf_03_1.webp" class="img-fluid" alt="">
-                <div class="portfolio-info">
-                  <h4>Qt6 In-App-Purchasing</h4>
-                  <p>C++, Qt/QML, Objective-C, Java</p>
-                </div>
-              </a>
+            <div class="col-lg-4 col-md-6 portfolio-item filter-embc">
+              <div class="portfolio-wrap">
+                <a href="pf_01-details.html" class="portfolio-details-lightbox" data-glightbox="type: external" title="Portfolio Details">
+                  <img src="assets/img/portfolio/pf_01/pf_01_1.webp" class="img-fluid" alt="">
+                  <div class="portfolio-info">
+                    <h4 lang="en">BLE Device Firmware</h4>
+                    <h4 lang="de">BLE Gerätefirmware</h4>
+                    <p>Embedded C, RTOS, Nordic Semiconductor</p>
+                  </div>
+                </a>
+              </div>
             </div>
-          </div>
 
+            <div class="col-lg-4 col-md-6 portfolio-item filter-cpp filter-qt">
+              <div class="portfolio-wrap">
+                <a href="pf_02-details.html" class="portfolio-details-lightbox" data-glightbox="type: external" title="Portfolio Details">
+                  <img src="assets/img/portfolio/pf_02/pf_02_1.webp" class="img-fluid" alt="">
+                  <div class="portfolio-info">
+                    <h4>Cross-Platform App</h4>
+                    <p>C++, Qt/QML, Android, iOS, macOS, App</p>
+                  </div>
+                </a>
+              </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 portfolio-item filter-cpp filter-qt">
+              <div class="portfolio-wrap">
+                <a href="pf_03-details.html" class="portfolio-details-lightbox" data-glightbox="type: external" title="Portfolio Details">
+                  <img src="assets/img/portfolio/pf_03/pf_03_1.webp" class="img-fluid" alt="">
+                  <div class="portfolio-info">
+                    <h4>Qt6 In-App-Purchasing</h4>
+                    <p>C++, Qt/QML, Objective-C, Java</p>
+                  </div>
+                </a>
+              </div>
+            </div>
+
+          </div>
         </div>
 
       </div>
@@ -442,13 +439,13 @@
 
     <!-- ======= Testimonials Section ======= -->
     <section id="testimonials" class="testimonials section-bg" style="display: none;">
-      <div class="container" data-aos="fade-up">
+      <div class="container">
 
         <div class="section-title">
           <h2>Testimonials</h2>
         </div>
 
-        <div class="testimonials-slider swiper" data-aos="fade-up" data-aos-delay="100">
+        <div class="testimonials-slider swiper">
           <div class="swiper-wrapper">
 
             <div class="swiper-slide">
@@ -525,14 +522,14 @@
 
     <!-- ======= Contact Section ======= -->
     <section id="contact" class="contact section-bg">
-      <div data-aos="fade-up">
+      <div>
 
         <div class="section-title">
           <h2 lang="en">Contact me please</h2>
           <h2 lang="de">Kontakt</h2>
         </div>
 
-        <div class="container" data-aos="fade-up">
+        <div class="hidden container">
           <div class="row gy-5">
             <div class="col-lg-4 col-12 text-lg-start text-center">
               <h3 lang="en">Schedule a Call</h3></a>
@@ -598,7 +595,6 @@
 
   <!-- Vendor JS Files -->
   <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
-  <script src="assets/vendor/aos/aos.js"></script>
   <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
   <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
   <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
@@ -606,8 +602,7 @@
   <script src="assets/vendor/typed.js/typed.min.js"></script>
   <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
 
-  <!-- Template Main JS File -->
-  <script src="assets/js/main.js"></script>
+  <script defer src="assets/js/main.js"></script>
 
 </body>
 
