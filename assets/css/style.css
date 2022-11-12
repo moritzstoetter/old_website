@@ -685,6 +685,12 @@ html[lang=de] [lang]:not([lang=de]) {
   column-gap: 50px;
 }
 
+@media (max-width: 991px) {
+  .skills .skills-layout-grid { 
+    grid-template-columns: 1fr;
+  }
+}
+
 .skills .skills-table-grid {
   display: grid;
   grid-template-columns: 150px 50px;
