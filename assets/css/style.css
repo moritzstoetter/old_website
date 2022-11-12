@@ -24,12 +24,12 @@
 # Animate on scroll
 --------------------------------------------------------------*/
 
-
 .hidden { 
   transition: all .8s;
   opacity: 0;
   filter: blur(10px);
   transform: translateX(-100%);
+  background-color: transparent;
 }
 
 .show {
@@ -64,8 +64,6 @@ body {
   color: var(--col-fg-dark);
   background: url("../img/noise.png");
 }
-
-
 
 p {
   hyphens: auto;
