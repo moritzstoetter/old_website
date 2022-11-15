@@ -63,6 +63,21 @@
   width: 100%;
 }
 
+.resume .resume-right.hidden { 
+  transition: all .8s;
+  opacity: 0;
+  filter: blur(10px);
+  transform: translateX(100%);
+  background-color: transparent;
+}
+
+.resume .resume-right.show {
+  opacity: 1;
+  filter: blur(0);
+  transform: translateX(0);
+  background-color: transparent;
+}
+
 @media(prefers-reduced-motion) {
   .hidden {
     transition: none;
