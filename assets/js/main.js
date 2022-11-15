@@ -134,7 +134,7 @@ const setLang = (languageCode) => {
 
   /**
    * Scroll with offset on page load with hash links in the url
-   */
+   */ 
   window.addEventListener('load', () => {
     if (window.location.hash) {
       if (select(window.location.hash)) {
@@ -199,31 +199,54 @@ const setLang = (languageCode) => {
   }
 
   /**
-   * Porfolio isotope and filter
+   * Porfolio filter
    */
+ 
+  const selectActiveButton = (filterName) => {
+    const portfolioFilters = document.querySelectorAll('#portfolio-flters li');
+    portfolioFilters.forEach( (filter) => {
+      if (filter.getAttribute('data-filter') === filterName) {
+        filter.classList.add('filter-active');    
+      } else {
+        filter.classList.remove('filter-active');
+      }
+    });
+  }
+
+  const filterPortfolioItems = (filterName) => {
+    const portfolioItems = document.querySelectorAll('.portfolio-item');
+    portfolioItems.forEach( (item) => {
+      if( item.classList.contains(filterName) || filterName==='*' ) {
+        item.classList.add('active');
+      } else {
+        item.classList.remove('active');
+      }
+    });
+  };
+
   window.addEventListener('load', () => {
-    let portfolioContainer = select('.portfolio-container');
-    if (portfolioContainer) {
-      let portfolioIsotope = new Isotope(portfolioContainer, {
-        itemSelector: '.portfolio-item'
+    let portfolioContainer = select('.portfolio-item-layout');
+
+    const portfolioFilters = document.querySelectorAll('#portfolio-flters li');
+
+    portfolioFilters.forEach( (filter) => {
+      const activeFilter = filter.getAttribute('data-filter');
+      // selector buttons
+      filter.addEventListener('click', (e) => {
+        selectActiveButton(activeFilter);
+        filterPortfolioItems(activeFilter);
       });
+    });
 
-      let portfolioFilters = select('#portfolio-flters li', true);
+    const portfolioItems = document.querySelectorAll('.portfolio-item');
 
-      on('click', '#portfolio-flters li', function(e) {
-        e.preventDefault();
-        portfolioFilters.forEach(function(el) {
-          el.classList.remove('filter-active');
-        });
-        this.classList.add('filter-active');
-
-        portfolioIsotope.arrange({
-          filter: this.getAttribute('data-filter')
-        });
-        portfolioIsotope.on('arrangeComplete', function() {
-        });
-      }, true);
-    }
+    portfolioItems.forEach( (item) => {
+      item.addEventListener('transitionend', (e) => {
+        if ( !item.classList.contains('active') ) {
+          item.style.display = 'none';
+        } 
+      });
+    })
 
   });
 
@@ -279,8 +302,8 @@ const setLang = (languageCode) => {
     entries.forEach((entry) => {
       if (entry.isIntersecting) {
         entry.target.classList.add('show');
-      } else {
-        entry.target.classList.remove('show');
+      // } else {
+        // entry.target.classList.remove('show');
       }
     });
   });
@@ -288,20 +311,9 @@ const setLang = (languageCode) => {
   const hiddenElements = document.querySelectorAll('.hidden');
   hiddenElements.forEach((el) => observer.observe(el));
 
-  // if (headshot) {
-  //   const shiftHeadshot = () => {
-  //     // console.log(window.scrollY);
-  //     const scroll = window.scrollY;
-  //     headshot.style.transform = 'translate(0,${scroll})';
-  //   }
-  //   window.addEventListener('load', shiftHeadshot);
-  //   onscroll(document, shiftHeadshot);
-  // }
-
   const headshot = document.querySelector('.headshot');
-  window.addEventListener('scroll', (e) =>{
-    const shiftY = Math.min(window.scrollY,610);
-    console.log(shiftY);
+  window.addEventListener('scroll', (e) => {
+    const shiftY = Math.min(1.5*window.scrollY,.775*headshot.offsetHeight);
     headshot.style.transform = 'translate(0,' + shiftY + 'px)';
   });
 
