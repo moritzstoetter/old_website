@@ -429,7 +429,6 @@ html[lang=de] [lang]:not([lang=de]) {
 }
 
 @media (min-width: 992px) {
-
   .nav-menu a,
   .nav-menu a:focus {
     width: 56px;
@@ -490,6 +489,19 @@ html[lang=de] [lang]:not([lang=de]) {
 
 .mobile-nav-active {
   overflow: hidden;
+  /* opacity: .5;
+  background: ; */
+}
+
+.mobile-nav-active::after {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  opacity: .5;
+  background-color: var(--col-fg-dark);
 }
 
 .mobile-nav-active #header {
