@@ -315,10 +315,4 @@ const setLang = (languageCode) => {
     const shiftY = Math.min(1.5*window.scrollY,.775*headshot.offsetHeight);
     headshot.style.transform = 'translate(0,' + shiftY + 'px)';
   });
-
-  /**
-   * Initiate Pure Counter 
-   */
-  new PureCounter();
-
 })()
