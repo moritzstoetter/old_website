@@ -145,11 +145,24 @@ section {
 
 section:not(.hero){
   padding: 10vh 10vh 10vh 0;
+  border-top: 1px solid var(--col-bg-medium);
+  /* border-top: 4px solid white; */
 }
+
+section:nth-of-type(even) {
+  background-color: rgba(0, 0, 0, 0.04);
+}
+
 
 @media (max-width: 991px) {
   section:not(.hero) {
     padding: 10vh 10px 10vh 10px;
+  }
+}
+
+@media (min-width: 991px) {
+  section:not(.hero) {
+    padding-left: 100px;
   }
 }
 
@@ -365,11 +378,7 @@ html[lang=de] [lang]:not([lang=de]) {
   }
 }
 
-@media (min-width: 991px) {
-  #main {
-    margin-left: 100px;
-  }
-}
+
 
 /*--------------------------------------------------------------
 # Navigation Menu
@@ -521,7 +530,6 @@ html[lang=de] [lang]:not([lang=de]) {
   height: 100vh;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr auto 1fr;
-  border-bottom: 3px dotted var(--col-bg-medium);
 }
 
 .hero .text {
