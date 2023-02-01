@@ -94,12 +94,12 @@ body {
   background: url("../img/noise.png");
 }
 
-p, h3, h4, h5, h6 {
-  hyphens: auto;
+p, li {
+  font-size: 14pt;
+  font-weight: 300;
 }
 
-p .emph {
-  font-weight: bold;
+p, h3, h4, h5, h6 {
   hyphens: auto;
 }
 
@@ -643,11 +643,6 @@ html[lang=de] [lang]:not([lang=de]) {
   padding: 0;
 }
 
-.about .content ul li {
-  /* display: flex;
-  align-items: center; */
-}
-
 .about .content ul strong {
   margin-right: 10px;
 }
@@ -662,6 +657,20 @@ html[lang=de] [lang]:not([lang=de]) {
 .about .content p:last-child {
   margin-bottom: 0;
 }
+
+@media (max-width: 992px) {
+  .about .content {
+    text-align: center;
+    padding: 0 10% 0 10%;
+  }
+  .about .content ul {
+    display: block;
+  }
+  .about .content li {
+    margin-bottom: 16px;
+  }
+}
+
 
 /*--------------------------------------------------------------
 # Skills
@@ -690,6 +699,7 @@ html[lang=de] [lang]:not([lang=de]) {
 .skills .skill {
   align-self: center;
   padding: 5px 10px 5px 0px;
+  margin: 0;
   color: var(--col-fg-dark);
 }
 
@@ -1364,9 +1374,6 @@ html[lang=de] [lang]:not([lang=de]) {
   grid-row: 5/6;
   align-self: end;
   justify-self: end;
-}
-
-.contact .form-control {
 }
 
 .contact .form-control:focus {
