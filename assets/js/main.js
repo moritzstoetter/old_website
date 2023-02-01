@@ -281,11 +281,11 @@ const setLang = (languageCode) => {
    * Testimonials slider
    */
   new Swiper('.testimonials-slider', {
-    speed: 600,
+    speed: 2000,
     loop: true,
     autoplay: {
-      delay: 5000,
-      disableOnInteraction: false
+      delay: 15000,
+      disableOnInteraction: true
     },
     slidesPerView: 'auto',
     navigation: {
