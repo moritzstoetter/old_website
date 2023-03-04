@@ -1490,3 +1490,25 @@ html[lang=de] [lang]:not([lang=de]) {
 #footer .credits {
   font-size: 13px;
 }
+
+
+
+.home-button {
+  margin-top: 5px;
+  display: flex;
+  background-color: var(--col-acc-medium);
+  width: 40px;
+  border-radius: 50px;
+}
+
+.home-button i {
+  font-size: 24px;
+  color: var(--col-bg-light);
+  line-height: 0;
+}
+
+.home-button:hover {
+  background: var(--col-acc-light);
+  color: var(--col-bg-light);
+}
+
