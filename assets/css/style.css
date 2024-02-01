@@ -823,6 +823,7 @@ html[lang=de] [lang]:not([lang=de]) {
 .portfolio .portfolio-item-layout {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px,300px));
+  grid-auto-rows: 1fr;
   justify-content: center;
 }
 
@@ -834,7 +835,11 @@ html[lang=de] [lang]:not([lang=de]) {
 
 .portfolio .portfolio-item {
   display: none;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1 / 1;
   align-items: center;
+  justify-items: center;
 }
 
 .portfolio .portfolio-item.active {
@@ -890,7 +895,7 @@ html[lang=de] [lang]:not([lang=de]) {
   background: transparent;
   padding: 10px;
   overflow: visible;
-  /* align-self: center; */
+  justify-self: center;
 }
 
 .portfolio .portfolio-item img {
