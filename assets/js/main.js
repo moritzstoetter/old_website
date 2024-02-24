@@ -203,7 +203,7 @@ const setLang = (languageCode) => {
    */
  
   const selectActiveButton = (filterName) => {
-    const portfolioFilters = document.querySelectorAll('#portfolio-flters li');
+    const portfolioFilters = document.querySelectorAll('#portfolio-filters li');
     portfolioFilters.forEach( (filter) => {
       if (filter.getAttribute('data-filter') === filterName) {
         filter.classList.add('filter-active');    
@@ -227,7 +227,7 @@ const setLang = (languageCode) => {
   window.addEventListener('load', () => {
     let portfolioContainer = select('.portfolio-item-layout');
 
-    const portfolioFilters = document.querySelectorAll('#portfolio-flters li');
+    const portfolioFilters = document.querySelectorAll('#portfolio-filters li');
 
     portfolioFilters.forEach( (filter) => {
       const activeFilter = filter.getAttribute('data-filter');

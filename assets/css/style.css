@@ -137,6 +137,11 @@ section {
 section:not(.hero){
   padding: 10vh 20vh 10vh 20vh;
   border-top: 1px solid var(--col-bg-medium);
+  display: flex; /* Use Flexbox for the outer container */
+  flex-direction: column;
+  justify-content: center; /* Center content horizontally */
+  align-items: center; /* Center content vertically */
+  min-height: 100vh; /* Minimum height of 100 viewport heights */
 }
 
 section:nth-of-type(even) {
@@ -146,7 +151,7 @@ section:nth-of-type(even) {
 
 @media (max-width: 991px) {
   section:not(.hero) {
-    padding: 10vh 10px 10vh 10px;
+    padding: 50px 50px 50px 50px;
   }
 }
 
@@ -704,7 +709,8 @@ html[lang=de] [lang]:not([lang=de]) {
 --------------------------------------------------------------*/
 .skills .skills-layout { 
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 300px));
+  width: 100%;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 250px));
   justify-content: center;
   grid-gap: 30px;
 }
@@ -712,26 +718,26 @@ html[lang=de] [lang]:not([lang=de]) {
 .skills .skills-table-grid {
   display: grid;
   align-self: center;
+  align-items: center;
+  justify-items: left;
   grid-template-columns: 1fr auto;
-  grid-template-rows: auto
+  grid-template-rows: auto;
+  grid-gap: 10px;
 }
 
 .skills .skills-category-title {
-  padding: 15px 0 0 0;
+  padding: 15px 0 0 0px;
   grid-column: 1 / span 2;
-  align-self: center;
-  justify-self: left;
 }
 
 .skills .skill {
-  align-self: center;
   padding: 5px 10px 5px 0px;
   margin: 0;
   color: var(--col-fg-dark);
 }
 
 .skills .stars {
-  align-self: center;
+  margin: 0;
   color: var(--col-acc-medium);
   overflow: hidden;
 }
@@ -785,12 +791,6 @@ html[lang=de] [lang]:not([lang=de]) {
   color: var(--col-fg-medium);
 }
 
-@media (max-width: 991px) {
-  /* .resume .resume-item-jobtitle > h4 {
-    font-size: 18px;
-  } */
-}
-
 .resume .resume-item-company {
   grid-column: 1 / 2;
   grid-row: 5 / 6;
@@ -839,10 +839,56 @@ html[lang=de] [lang]:not([lang=de]) {
 /*--------------------------------------------------------------
 # Portfolio
 --------------------------------------------------------------*/
+.portfolio .content {
+  width: 100%;
+}
+
+.portfolio #portfolio-filters {
+  padding: 0;
+  margin: 0 auto 25px auto;
+  list-style: none;
+  text-align: center;
+  background: transparent;
+  border-radius: 50px;
+  padding: 2px 15px;
+}
+
+.portfolio #portfolio-filters li {
+  cursor: pointer;
+  display: inline-block;
+  padding: 10px 15px;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1;
+  text-transform: uppercase;
+  color: var(--col-fg-medium);
+  margin-bottom: 5px;
+  transition: all 0.3s ease-in-out;
+}
+
+.portfolio #portfolio-filters li:hover {
+  color: var(--col-fg-medium);
+  background-color: white;
+  border: 1px solid var(--col-bg-medium);
+  border-radius: 30px;
+}
+
+.portfolio #portfolio-filters li.filter-active {
+  color: var(--col-acc-medium);
+  background-color: white;
+  border: 1px solid var(--col-acc-medium);
+  border-radius: 30px;
+}
+
+.portfolio #portfolio-filters li:last-child {
+  margin-right: 0;
+}
+
 .portfolio .portfolio-item-layout {
   display: grid;
+  width: 100%;
   grid-template-columns: repeat(auto-fit, minmax(200px,300px));
-  grid-auto-rows: 1fr;
+  /* grid-auto-rows: 1fr; */
   justify-content: center;
 }
 
@@ -863,47 +909,6 @@ html[lang=de] [lang]:not([lang=de]) {
 
 .portfolio .portfolio-item.active {
   display: grid;
-}
-
-.portfolio #portfolio-flters {
-  padding: 0;
-  margin: 0 auto 25px auto;
-  list-style: none;
-  text-align: center;
-  background: transparent;
-  border-radius: 50px;
-  padding: 2px 15px;
-}
-
-.portfolio #portfolio-flters li {
-  cursor: pointer;
-  display: inline-block;
-  padding: 10px 15px;
-  font-size: 14px;
-  font-weight: 600;
-  line-height: 1;
-  text-transform: uppercase;
-  color: var(--col-fg-medium);
-  margin-bottom: 5px;
-  transition: all 0.3s ease-in-out;
-}
-
-.portfolio #portfolio-flters li:hover {
-  color: var(--col-fg-medium);
-  background-color: white;
-  border: 1px solid var(--col-bg-medium);
-  border-radius: 30px;
-}
-
-.portfolio #portfolio-flters li.filter-active {
-  color: var(--col-acc-medium);
-  background-color: white;
-  border: 1px solid var(--col-acc-medium);
-  border-radius: 30px;
-}
-
-.portfolio #portfolio-flters li:last-child {
-  margin-right: 0;
 }
 
 .portfolio .portfolio-item {
@@ -1327,7 +1332,8 @@ html[lang=de] [lang]:not([lang=de]) {
 # Contact
 --------------------------------------------------------------*/
 .contact .contact-layout {
-  display: grid;
+  display: flex;
+  width: 100%;
   grid-template-columns: auto 1fr;
   column-gap: 60px;
 }
@@ -1341,8 +1347,6 @@ html[lang=de] [lang]:not([lang=de]) {
   display: grid;
   grid-template-columns: 1fr 1fr;
   row-gap: 5px;
-  grid-column: 2/3;
-  grid-row: 1/2;
 }
 
 @media (max-width: 991px) {
@@ -1353,8 +1357,6 @@ html[lang=de] [lang]:not([lang=de]) {
   }
 
   .contact .schedule  {
-    /* justify-self: center;
-    justify-items: center; */
     text-align: center;
   }
 
@@ -1363,9 +1365,8 @@ html[lang=de] [lang]:not([lang=de]) {
   }
 
   .contact form {
-    grid-column: 1/2;
+    grid-column: 1/span 2;
     grid-row: 2/3;
-    /* justify-items: center; */
 }
 
 }
