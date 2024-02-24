@@ -34,10 +34,9 @@
 <body>
 
   <!-- ======= Mobile nav toggle button ======= -->
-  <!-- <button type="button" class="mobile-nav-toggle d-xl-none"><i class="bi bi-list mobile-nav-toggle"></i></button> -->
   <i class="bi bi-list mobile-nav-toggle d-lg-none"></i>
   <!-- ======= Header ======= -->
-  <header id="header" class="hidden d-flex flex-column justify-content-center">
+  <header id="header" class="hidden left-hidden d-flex flex-column justify-content-center">
     <nav id="navbar" class="navbar nav-menu">
       <ul>
         <li><a href="#hero" class="nav-link scrollto active"><i class="bx bx-home"></i> <span>Home</span></a></li>
@@ -52,7 +51,7 @@
         <li><a href="#contact" class="nav-link scrollto"><i class='bx bx-envelope'></i> <span lang="en">Contact</span>
             <span lang="de">Kontakt</span> </a></li>
       </ul>
-    </nav><!-- .nav-menu -->
+    </nav>
   </header><!-- End Header -->
 
   <!-- ======= Hero Section ======= -->
@@ -83,7 +82,7 @@
       <h2 lang="de">Über mich</h2>
     </div>
 
-    <div class="hidden content">
+    <div class="hidden left-hidden content">
       <h3 lang="en">Embedded C++ Developer</h3>
       <h3 lang="de">Embedded C++ Entwickler</h3>
       <p lang="en">I am a multifaceted engineer specializing in software development for embedded devices in modern C++,
@@ -97,8 +96,7 @@
       <ul>
         <li><i class="bi bi-mortarboard"></i> <span>Dipl.-Ing. (Univ.)</span></li>
         <li><i class="bi bi-house"></i> <span lang="en">Munich, Germany</span> <span lang="de">München</span></li>
-        <li><i class="bi bi-chat-dots"></i> <span lang="en">German, English, French</span> <span lang="de">Deutsch,
-            Englisch, Französisch</span> </li>
+        <li><i class="bi bi-chat-dots"></i><span lang="en">German, English, French</span><span lang="de">Deutsch, Englisch, Französisch</span> </li>
       </ul>
       <p lang="en">If you are looking for help with embedded software development in cutting edge C++ or need general
         consultation on embedded software please reach out through <a href="#contact">the form below</a> or <a
@@ -108,6 +106,12 @@
         Beratung suchen zum Thema Embedded-Software, bitte <a href="#contact">schreiben Sie mich an</a>, oder
         vereinbaren Sie direkt einen <a href="https://calendly.com/moritzstoetter/30min">Termin für ein Gespräch</a>.
         Ich spreche gern mit Ihnen über Ihr technisches Problem.</p>
+    </div>
+
+    <div class="hidden right-hidden quote">
+      <h4>„When I am working on a problem I never think about beauty. I think only how to solve the problem. <br>But when I 
+        have finished, if the solution is not beautiful, I know it is wrong."</h4>
+      <p>R B Fuller</p>
     </div>
   </section><!-- End About Section -->
 
@@ -174,7 +178,7 @@
       <h2>Highlights</h2>
     </div>
 
-    <div class="hidden">
+    <div class="hidden left-hidden">
       <ul id="portfolio-flters">
         <li data-filter="*" class="filter-active">All</li>
         <li data-filter="filter-cpp">C++</li>
@@ -267,7 +271,7 @@
         <h2 lang="de">Kundenstimmen</h2>
       </div>
 
-      <div class="testimonials-slider hidden swiper">
+      <div class="testimonials-slider hidden left-hidden swiper">
         <div class="swiper-wrapper">
 
           <div class="swiper-slide">
@@ -288,7 +292,6 @@
               </p>
             </div>
           </div><!-- End testimonial item -->
-
 
           <div class="swiper-slide">
             <div class="testimonial-item">
@@ -347,7 +350,6 @@
           </div><!-- End testimonial item -->
 
         </div>
-
         <div class="swiper-button-next"></div>
         <div class="swiper-button-prev"></div>
       </div>
@@ -362,7 +364,7 @@
     </div>
 
     <div class="resume-layout">
-      <div class="hidden resume-section">
+      <div class="hidden left-hidden resume-section">
         <h3 class="resume-section-title" lang="en">Professional Experience</h3>
         <h3 class="resume-section-title" lang="de">Berufserfahrung</h3>
 
@@ -456,7 +458,7 @@
         </div>
       </div>
 
-      <div class="hidden resume-section resume-right">
+      <div class="hidden right-hidden resume-section resume-right">
         <h3 class="resume-section-title" lang="en">Education</h3>
         <h3 class="resume-section-title" lang="de">Ausbildung</h3>
 
@@ -554,15 +556,13 @@
         <h2 lang="de">Kontakt</h2>
       </div>
 
-      <div class="hidden contact-layout">
+      <div class="hidden left-hidden contact-layout">
         <div class="schedule">
           <h3 lang="en">Schedule a Call</h3></a>
           <h3 lang="de">Termin vereinbaren</h3></a>
           <a class="schedule-button btn btn-primary" href="https://calendly.com/moritzstoetter/30min"><i
               class="bi bi-calendar-event"></i> Calendly</a>
         </div>
-
-
 
         <form method="post" action="https://forms.un-static.com/forms/ed0c50b5ef1f373fa0cd56407c4347a6e6141beb">
           <div class="email-title">
@@ -597,7 +597,6 @@
 
   </section><!-- End Contact Section -->
 
-
   <!-- ======= Footer ======= -->
   <footer id="footer">
     <div class="container">
@@ -626,8 +625,6 @@
     <li class="back-to-top"><a class="d-flex align-items-center justify-content-center collapse" href="#"><i
           class="bi bi-arrow-up-short"></i></a></li>
   </ul>
-
-  <!-- class="d-flex align-items-center justify-content-center" -->
 
   <!-- Vendor JS Files -->
   <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
