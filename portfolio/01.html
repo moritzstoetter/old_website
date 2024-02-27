@@ -14,7 +14,9 @@
   <link href="../assets/img/apple-touch-icon.png" rel="apple-touch-icon">
 
   <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+    rel="stylesheet">
 
   <!-- Vendor CSS Files -->
   <link href="../assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
@@ -34,74 +36,66 @@
 
     <!-- ======= Portfolio Details Section ======= -->
     <section id="portfolio-details" class="portfolio-details">
-      <div class="container">
-
-        <div class="row gy-4">
-
-          <div class="col-lg-8">
-            <div class="portfolio-details-slider swiper">
-              <div class="swiper-wrapper align-items-center">
-
-                <div class="swiper-slide">
-                  <img src="../assets/img/portfolio/01/pf_01_1.webp" alt="">
-                </div>
-                <div class="swiper-slide">
-                  <img src="../assets/img/portfolio/01/pf_01_2.webp" alt="">
-                </div>
-                <div class="swiper-slide">
-                  <img src="../assets/img/portfolio/01/pf_01_3.webp" alt="">
-                </div>
-
-              </div>
-              <div class="swiper-pagination"></div>
-            </div>
-          </div>
-
-          <div class="col-lg-4">
-            <div class="portfolio-details-text">
-
-              <div class="portfolio-info">
-                <h4 lang="en">BLE Device Firmware</h4>
-                <h4 lang="de">BLE Gerätefirmware</h4>
-                <ul>
-                  <li><strong><span lang="en">Category</span><span lang="de">Kategorie</span></strong>: Embedded C</li>
-                  <li><strong><span lang="en">Client</span><span lang="de">Kunde</span></strong>: Climb Smart GmbH</li>
-                  <li><strong><span lang="en">Sector</span><span lang="de">Sektor</span></strong>: <span lang="en">Consumer electronics</span><span lang="de">Unterhaltungselektronik</span></li>
-                  <li><strong><span lang="en">Time frame</span><span lang="de">Zeitraum</span></strong>: <span lang="en">2019, 3 months</span><span lang="de">2019, 3 Monate</span></li>
-                  <li><strong><span lang="en">Technologies</span><span lang="de">Technologien</span></strong>: 
-                    <span lang="en">Embedded C, RTOS, BLE, I2C, Nordic Semiconductor SDK, Bluetooth LE, Oscilloscope, SWD, Git</span> 
-                    <span= lang="de">Embedded C, RTOS, BLE, I2C, Nordic Semiconductor SDK, Bluetooth LE, Oszilloskop, SWD, Git</span></li>
-                </ul>
-              </div>
-
-              <div class="portfolio-description">
-                <ul>
-                  <span lang="en">
-                    <li>Firmware development for the Nordic-Semiconductor SoC nRF52832</li>
-                    <li>Zephyr RTOS based</li>
-                    <li>Bluetooth Low Energy based communication: Advertising, connection handling, error handling, services</li>
-                    <li>Custom bluetooth services for broadcasting real-time sensor values</li>
-                    <li>Development of a custom driver for the ADC nau7802, implementing all its functionalities as per the datasheet provided by the manufacturer; testing and verification via oscilloscope</li>
-                    <li>Over-the-air device firmware upgrade capabilities implemented</li>
-                    <li>Programming and debugging via SWD</li>
-                  </span>
-                  <span lang="de">
-                    <li>Firmware Entwicklung für den Nordic Semiconductor SoC nrf52832</li>
-                    <li>Zephyr RTOS basiert</li>
-                    <li>Bluetooth Low Energy Kommunikation: Advertising, Verbindungsaufbau und -behandlung, Fehlerbehandlung, Dienste</li>
-                    <li>Maßgeschneiderte Bluetoothdienste zum Verschicken von Echtzeitmessdaten</li>
-                    <li>Treiberentwicklung für den ADC nau7802; Umsetzung aller Funktionalitäten gemäß Datenblatt; Verifikation via Oszilloskop</li>
-                    <li>Kabelloses Gerätefirmwareupdate vorbereitet</li>
-                    <li>Programmierung und Debugging via SWD</li>
-                  </span>
-                </ul>
-              </div>
-
-            </div>
-          </div>
-
+      <div class="section-title">
+        <h2 lang="de">BLE Device Firmware</h2>
+        <h2 lang="en">BLE Gerätefirmware</h2>
+        <p lang="en">2019, 3 months</p>
+        <p lang="de">2019, 3 Monate</p>
+      </div>
+      <div class="section-content">
+        <div class="description">
+          <h4><span lang="en">Category</span><span lang="de">Kategorie</span></h4>
+          <p>Embedded C</p>
+          <h4><span lang="en">Client</span><span lang="de">Kunde</span></h4>
+          <p>Climb Smart GmbH</p>
+          <h4><span lang="en">Sector</span><span lang="de">Sektor</span></h4>
+          <p><span lang="en">Consumer electronics</span><span lang="de">Unterhaltungselektronik</span></p>
+          <h4><span lang="en">Technologies</span><span lang="de">Technologien</span></h4>
+          <p>Embedded C — RTOS — BLE — I2C — Nordic Semiconductor — nrf52832 — ARM Cortex-M — Bluetooth LE — SWD</p>
         </div>
 
+
+        <div class="portfolio-details-swiper swiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <img src="../assets/img/portfolio/01/pf_01_1.webp" alt="">
+            </div>
+            <div class="swiper-slide">
+              <img src="../assets/img/portfolio/01/pf_01_2.webp" alt="">
+            </div>
+            <div class="swiper-slide">
+              <img src="../assets/img/portfolio/01/pf_01_3.webp" alt="">
+            </div>
+          </div>
+          <div class="swiper-pagination"></div>
+        </div>
+
+        <div class="details">
+          <ul>
+            <span lang="en">
+              <li>Firmware development for the Nordic-Semiconductor SoC nRF52832</li>
+              <li>Zephyr RTOS based</li>
+              <li>Bluetooth Low Energy based communication: Advertising, connection handling, error handling, services
+              </li>
+              <li>Custom bluetooth services for broadcasting real-time sensor values</li>
+              <li>Development of a custom driver for the ADC nau7802, implementing all its functionalities as per the
+                datasheet provided by the manufacturer; testing and verification via oscilloscope</li>
+              <li>Over-the-air device firmware upgrade capabilities implemented</li>
+              <li>Programming and debugging via SWD</li>
+            </span>
+            <span lang="de">
+              <li>Firmware Entwicklung für den Nordic Semiconductor SoC nrf52832</li>
+              <li>Zephyr RTOS basiert</li>
+              <li>Bluetooth Low Energy Kommunikation: Advertising, Verbindungsaufbau und -behandlung, Fehlerbehandlung,
+                Dienste</li>
+              <li>Maßgeschneiderte Bluetoothdienste zum Verschicken von Echtzeitmessdaten</li>
+              <li>Treiberentwicklung für den ADC nau7802; Umsetzung aller Funktionalitäten gemäß Datenblatt;
+                Verifikation via Oszilloskop</li>
+              <li>Kabelloses Gerätefirmwareupdate vorbereitet</li>
+              <li>Programmierung und Debugging via SWD</li>
+            </span>
+          </ul>
+        </div>
       </div>
     </section><!-- End Portfolio Details Section -->
 
