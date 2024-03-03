@@ -542,7 +542,7 @@ html[lang=de] [lang]:not([lang=de]) {
   grid-column: 2/3;
   grid-row: 1/4;
   min-height: 50vh;
-  background: url("../img/me01.webp") bottom center no-repeat;
+  background: url("../img/me.webp") bottom center no-repeat;
   background-size: contain;
   opacity: .9;
 }
