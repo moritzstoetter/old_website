@@ -631,9 +631,9 @@ html[lang=de] [lang]:not([lang=de]) {
 /*--------------------------------------------------------------
 # About
 --------------------------------------------------------------*/
-/* .about .section-content {
-  grid-template-columns: 1fr;
-} */
+.about .section-content {
+  row-gap: 30px;
+}
 
 .about .section-content ul {
   display: flex;
@@ -662,7 +662,7 @@ html[lang=de] [lang]:not([lang=de]) {
 
 .about .quote {
   display: grid;
-  margin-top: 150px;
+  margin-top: 120px;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: auto auto;
 }
