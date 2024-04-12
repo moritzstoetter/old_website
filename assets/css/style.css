@@ -140,22 +140,21 @@ section {
 }
 
 section:not(.hero) {
-  padding: 10vh 100px 10vh 100px;
+  padding: 10vh 200px 10vh 200px;
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: auto 1fr;
   min-height: 100vh;
 }
 
-section:nth-of-type(even) {
-  background-color: rgba(0, 0, 0, 0.04);
-}
-
-
 @media (max-width: 1000px) {
   section:not(.hero) {
     padding: 50px 50px 50px 50px;
   }
+}
+
+section:nth-of-type(even) {
+  background-color: rgba(0, 0, 0, 0.04);
 }
 
 .section-title {
@@ -625,7 +624,6 @@ html[lang=de] [lang]:not([lang=de]) {
 
 .hero .social-links a:hover {
   color: var(--col-acc-medium);
-
 }
 
 /*--------------------------------------------------------------
